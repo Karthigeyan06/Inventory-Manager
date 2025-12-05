@@ -90,9 +90,9 @@ def handle_out():
     data = scan_qr()
     if data:
         remove_item(data['package_id'])
-        result_label.configure(text=f"📦 {data['package_id']} removed from inventory.")
+        result_label.configure(text=f" {data['package_id']} removed from inventory.")
     else:
-        result_label.configure(text="❌ No valid QR code scanned.")
+        result_label.configure(text=" No valid QR code scanned.")
 
 setup_database()
 ctk.set_appearance_mode("Light")
