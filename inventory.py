@@ -82,9 +82,9 @@ def handle_in():
     data = scan_qr()
     if data:
         add_item(data)
-        result_label.configure(text=f"✅ {data['package_id']} added to inventory.")
+        result_label.configure(text=f"{data['package_id']} added to inventory.")
     else:
-        result_label.configure(text="❌ No valid QR code scanned.")
+        result_label.configure(text="No valid QR code scanned.")
 
 def handle_out():
     data = scan_qr()
